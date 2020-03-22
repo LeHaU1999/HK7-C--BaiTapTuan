@@ -1,0 +1,9 @@
+C:\Users\letra\OneDrive\Desktop\Lap-Trinh-Moi-Truong-Truc-Quan\Tuan_1\Module2\Bai_1\Bai_1\bin\Debug\Bai_1.exe.config
+C:\Users\letra\OneDrive\Desktop\Lap-Trinh-Moi-Truong-Truc-Quan\Tuan_1\Module2\Bai_1\Bai_1\bin\Debug\Bai_1.exe
+C:\Users\letra\OneDrive\Desktop\Lap-Trinh-Moi-Truong-Truc-Quan\Tuan_1\Module2\Bai_1\Bai_1\bin\Debug\Bai_1.pdb
+C:\Users\letra\OneDrive\Desktop\Lap-Trinh-Moi-Truong-Truc-Quan\Tuan_1\Module2\Bai_1\Bai_1\obj\Debug\Bai_1.csprojAssemblyReference.cache
+C:\Users\letra\OneDrive\Desktop\Lap-Trinh-Moi-Truong-Truc-Quan\Tuan_1\Module2\Bai_1\Bai_1\obj\Debug\Bai_1.frmSuDungLabelTextBox.resources
+C:\Users\letra\OneDrive\Desktop\Lap-Trinh-Moi-Truong-Truc-Quan\Tuan_1\Module2\Bai_1\Bai_1\obj\Debug\Bai_1.Properties.Resources.resources
+C:\Users\letra\OneDrive\Desktop\Lap-Trinh-Moi-Truong-Truc-Quan\Tuan_1\Module2\Bai_1\Bai_1\obj\Debug\Bai_1.csproj.GenerateResource.cache
+C:\Users\letra\OneDrive\Desktop\Lap-Trinh-Moi-Truong-Truc-Quan\Tuan_1\Module2\Bai_1\Bai_1\obj\Debug\Bai_1.exe
+C:\Users\letra\OneDrive\Desktop\Lap-Trinh-Moi-Truong-Truc-Quan\Tuan_1\Module2\Bai_1\Bai_1\obj\Debug\Bai_1.pdb

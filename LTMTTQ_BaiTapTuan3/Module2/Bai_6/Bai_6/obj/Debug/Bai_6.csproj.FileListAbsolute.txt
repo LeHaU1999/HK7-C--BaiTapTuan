@@ -1,0 +1,9 @@
+C:\Users\letra\OneDrive\Desktop\Lap-Trinh-Moi-Truong-Truc-Quan\Tuan_1\Module2\Bai_6\Bai_6\bin\Debug\Bai_6.exe.config
+C:\Users\letra\OneDrive\Desktop\Lap-Trinh-Moi-Truong-Truc-Quan\Tuan_1\Module2\Bai_6\Bai_6\bin\Debug\Bai_6.exe
+C:\Users\letra\OneDrive\Desktop\Lap-Trinh-Moi-Truong-Truc-Quan\Tuan_1\Module2\Bai_6\Bai_6\bin\Debug\Bai_6.pdb
+C:\Users\letra\OneDrive\Desktop\Lap-Trinh-Moi-Truong-Truc-Quan\Tuan_1\Module2\Bai_6\Bai_6\obj\Debug\Bai_6.csprojAssemblyReference.cache
+C:\Users\letra\OneDrive\Desktop\Lap-Trinh-Moi-Truong-Truc-Quan\Tuan_1\Module2\Bai_6\Bai_6\obj\Debug\Bai_6.frmMain.resources
+C:\Users\letra\OneDrive\Desktop\Lap-Trinh-Moi-Truong-Truc-Quan\Tuan_1\Module2\Bai_6\Bai_6\obj\Debug\Bai_6.Properties.Resources.resources
+C:\Users\letra\OneDrive\Desktop\Lap-Trinh-Moi-Truong-Truc-Quan\Tuan_1\Module2\Bai_6\Bai_6\obj\Debug\Bai_6.csproj.GenerateResource.cache
+C:\Users\letra\OneDrive\Desktop\Lap-Trinh-Moi-Truong-Truc-Quan\Tuan_1\Module2\Bai_6\Bai_6\obj\Debug\Bai_6.exe
+C:\Users\letra\OneDrive\Desktop\Lap-Trinh-Moi-Truong-Truc-Quan\Tuan_1\Module2\Bai_6\Bai_6\obj\Debug\Bai_6.pdb

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Login" Class="LinQConnectionDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-EUPI4M9;Initial Catalog=Login;Integrated Security=True" SettingsObjectName="LoginPostgreSQL.Properties.Settings" SettingsPropertyName="LoginConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TaiKhoang" Member="TaiKhoangs">
+    <Type Name="TaiKhoang">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

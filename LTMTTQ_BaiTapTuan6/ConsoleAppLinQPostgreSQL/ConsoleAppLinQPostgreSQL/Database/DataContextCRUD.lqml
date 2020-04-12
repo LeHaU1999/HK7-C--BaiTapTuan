@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database Name="db_crud" EntityNamespace="DbCrudContext" ContextNamespace="DbCrudContext" Class="DbCrudDataContext" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ed:Guid="4c4dd568-cfbf-487f-9c12-45578848d77b" Provider="Devart.Data.PostgreSql.Linq.Provider.PgSqlDataProvider, Devart.Data.PostgreSql.Linq" Extended="true" xmlns="http://schemas.devart.com/linqconnect/mapping">
+  <Connection Mode="ConnectionString" ConnectionString="User Id=postgres;Password=suong123;Host=localhost;Database=db_crud;Persist Security Info=True;Initial Schema=public" Provider="Devart.Data.PostgreSql" />
+  <Table Name="public.crud" Member="Cruds">
+    <Type Name="Crud" ed:Guid="f8c77237-99ec-4b49-8205-d3f354e3e4fd">
+      <Column Name="id" Member="Id" Type="System.Int64" AutoSync="OnInsert" DbType="BIGSERIAL NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="0a5e2c02-f4fa-4cf4-9381-a0b178305007" />
+      <Column Name="first_name" Member="FirstName" Type="System.String" DbType="TEXT" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="cb22f402-4d21-44fd-ba3f-d6c7ec11222f" />
+      <Column Name="last_name" Member="LastName" Type="System.String" DbType="TEXT" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="1ca8147d-9329-4ae2-92dc-c2c7b045c714" />
+      <Column Name="gender" Member="Gender" Type="System.String" DbType="TEXT" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="8ffd15ee-e678-4285-8faa-adce6137ecbd" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3417C97E-FB98-43E5-AEFE-AFE3B07F7B9E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LinQToPostgreSQLDemo</RootNamespace>
+    <AssemblyName>LinQToPostgreSQLDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Devart.Data, Version=5.0.2404.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.Linq, Version=4.9.1949.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.PostgreSql, Version=7.17.1612.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.PostgreSql.Linq, Version=4.9.1949.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Databases\DataContextCRUD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataContextCRUD.lqml</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Databases\DataContextCRUD.Diagram1.view">
+      <DependentUpon>DataContextCRUD.lqml</DependentUpon>
+    </None>
+    <None Include="Databases\DataContextCRUD.edps">
+      <DependentUpon>DataContextCRUD.lqml</DependentUpon>
+    </None>
+    <None Include="Databases\DataContextCRUD.lqml">
+      <Generator>DevartLinqToSqlGenerator</Generator>
+      <LastGenOutput>DataContextCRUD.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\DbCrudContext.Crud.datasource" />
+    <None Include="Properties\DataSources\DbCrudContext.DbCrudDataContext.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.CommonLexem.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.ComponentAddedEventHandler.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.ComponentRemovedEventHandler.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.ConnectionLostEventArgs.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.ConnectionLostEventHandler.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DataSetToolboxItem.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DataViewManagerPropertyDescriptor.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DbCommandBase.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DbCommandBuilder.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DbCommandBuilderBase.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DbConnectionBase.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DbConnectionStringBuilder.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DbDataAdapter.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DbDataReaderBase.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DbDataRowView.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DbDataSet.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DbDataSourceEnumerator.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DbDataTable.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DbDataTableView.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DbDump.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DbLoader.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DbLoaderColumn.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DbLoaderColumnCollection.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DbMonitor.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DbParameterBase.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DbParameterBaseCollection.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DbProviderException.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DbScript.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DbStatementExecuteEventArgs.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.DbTransactionBase.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.GetSymbolsHandler.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.GlobalComponentsCache.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.ILocalFailoverManager.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.Lexer.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.MonitorEventArgs.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.MonitorEventHandler.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.ParentDataRelation.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.ProxyException.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.ProxyOptions.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.ProxyOptionsPropertyChanged.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.QueryRecordCountException.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.SchemaTableColumn.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.SchemaTableOptionalColumn.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.ScriptErrorEventArgs.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.ScriptErrorEventHandler.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.ScriptProgressEventArgs.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.ScriptProgressEventHandler.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.SqlStatement.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.SqlStatementCollection.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.Token.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.TransactionStateChangedEventArgs.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.TransactionStateChangedEventHandler.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.TransactionStateChangeEventArgs.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.TransactionStateChangingEventArgs.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.TransactionStateChangingEventHandler.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.Utils+a.datasource" />
+    <None Include="Properties\DataSources\Devart.Common.Utils.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.DataLink.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.BaseDataTypeGenerator.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Binary.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.ChangeConflictCollection.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.ChangeConflictException.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.ChangeSet.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.CompiledQuery.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.CompiledQueryCache.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.DataContext.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.DataLoadOptions.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.DataProvider.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.DBConvert.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Engine.DbProviderType.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Engine.ProviderType.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.ForeignKeyReferenceAlreadyHasValueException.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.GuidGenerator.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.HiLoGenerator.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.IBaseDataTypeGenerator.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.IExecuteResult.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.IFunctionResult.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.IMultipleResults.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.IProviderNamingUtils.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.IQueryCache.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.ITable.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.KeyGenerator.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.LinqCommandExecutionException.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Accessors.MetaAccessor.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.AssociationAttribute.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.AttributeMappingSource.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.ColumnAttribute.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.CustomGeneratorAttribute.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.CustomMetaKeyGenerator.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.DataAttribute.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.DatabaseAttribute.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.ArrayPropertyConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.AssociationBaseConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.AssociationConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.AssociationManyEndConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.AssociationOneEndConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.AssociationStartConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.BinaryPropertyConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.BinaryPropertyConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.ClassBaseConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.ClassConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.ClassConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.ComplexConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.ComplexConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.Configuration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.ConfigurationReception.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.ConventionReception.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.CreateAssociationConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.CreateTablePerTypeInheritanceConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.CustomGeneratorConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.DateTimePropertyConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.DateTimePropertyConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.DecimalPropertyConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.DiscriminatorConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.DiscriminatorValueConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.EntityConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.EntityConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.FluentMappingBuilder.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.FluentMappingSource.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.GuidGeneratorConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.IAssociationConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.IClassConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.IClassConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.IComplexConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.IComplexConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.IConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.IConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.IEntityConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.IEntityConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.IInheritanceConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.IKeyGeneratorConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.IModelConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.IModelConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.InheritanceMapConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.IPropertyConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.IPropertyConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.KeyGeneratorConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.KeyGeneratorPicker.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.ManyToManyAssociationConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.ManyToManyNamesConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.MapPropertiesConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.MapTablesConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.ModelConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.NamingRules.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.NumberPropertyConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.NumericPropertyConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.PrimaryKeyConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.PrimaryKeyConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.PropertyBaseConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.PropertyConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.PropertyConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.PropertyNameConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.PropertyOrderConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.SequenceGeneratorConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.SequenceHiLoGeneratorConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.ServerDataTypeConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.SetAssociationOtherSideConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.SizablePropertyConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.StorageConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.StringPropertyConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.StringPropertyConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.TableHiLoGeneratorConfiguration.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.TableNameConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.Fluent.UpdateCheckConvention.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.FunctionAttribute.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.GuidGeneratorAttribute.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.GuidMetaKeyGenerator.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.InheritanceColumnMappingAttribute.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.InheritanceMappingAttribute.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.KeyGeneratorAttribute.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.MappingSource.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.MetaAssociation.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.MetaDataMember.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.MetaFunction.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.MetaKeyGenerator.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.MetaModel.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.MetaParameter.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.MetaTable.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.MetaType.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.ParameterAttribute.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.ProviderAttribute.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.ResultTypeAttribute.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.SequenceGeneratorAttribute.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.SequenceHiLoGeneratorAttribute.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.SequenceHiLoMetaKeyGenerator.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.SequenceMetaKeyGenerator.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.TableAttribute.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.TableHiLoGeneratorAttribute.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.TableHiLoMetaKeyGenerator.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.ValueTypePropertyAttribute.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Mapping.XmlMappingSource.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.MemberChangeConflict.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.ModifiedMemberInfo.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Monitoring.DbMonitor.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Monitoring.LinqMonitor.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Monitoring.MonitorEventArgs.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Monitoring.MonitorEventHandler.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.ObjectChangeConflict.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.ObjectSubmitError.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.ProductInfo.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Queryable.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.SequenceGenerator.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.SequenceHiLoGenerator.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.ServerDataTypeInfo.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.SqlMethods.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.SubmitErrorCollection.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.SubmitErrorEventArgs.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.SubmitErrorException.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.Table.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.TableGenerator.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.Linq.TableHiLoGenerator.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.Linq.PgSqlDataTypeGenerator.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.Linq.PgSqlNamingUtils.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.Linq.Provider.PgSqlDataProvider.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.Linq.Provider.PgSqlProviderType.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlArray.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlAttribute.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlAttributeCollection.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlBigIntRange.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlBlob.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlBox.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlCircle.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlCommand.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlCommandBuilder.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlConnection.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlConnectionStringBuilder.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlCursor.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlDataAdapter.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlDataReader.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlDataSourceEnumerator.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlDateRange.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlError.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlErrorCollection.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlErrorEventArgs.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlErrorEventHandler.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlException.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlInet.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlInfoMessageEventArgs.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlInfoMessageEventHandler.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlInterval.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlIntRange.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlLargeObject.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlLine.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlLocalization.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlLSeg.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlMacAddr.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlMetaDataCollectionNames.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlNotificationEventArgs.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlNotificationEventHandler.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlNumericRange.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlParameter.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlParameterCollection.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlPath.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlPoint.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlPolygon.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlProviderFactory.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlRow.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlRowType.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlRowUpdatedEventArgs.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlRowUpdatedEventHandler.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlRowUpdatingEventArgs.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlRowUpdatingEventHandler.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlText.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlTime.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlTimeStamp.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlTimeStampRange.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlTimeStampTZRange.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.PgSqlTransaction.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.PostgreSql.ProductInfo.datasource" />
+    <None Include="Properties\DataSources\Devart.Data.ProductInfo.datasource" />
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\LinQToPostgreSQLDemo.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\LinQToPostgreSQLDemo.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

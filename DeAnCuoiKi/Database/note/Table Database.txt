@@ -1,0 +1,96 @@
+note:	pk-khóa chính
+	fk-khóa ngoại
+	
+công việc:
+	22/04/2020: 	Dương + Hiếu + Kiệt: Làm sơ đồ lớp
+			Lan tiếp tục làm android
+			Hậu làm database
+						
+
+1 KHOA
+	-ma khoa(pk)	- varchar(10)
+	-tên khoa	- nvarchar(100)
+
+2 NGÀNH	
+	-mã ngành(pk)	- varchar(10)
+	-tên ngành	- nvarchar(100)
+	-mã khoa(fk)	- varchar(10)
+
+3 KHÓA HỌC
+	-mã khóa học(pk)- varchar(10)
+	-tên khóa học	- nvarchar(100)
+	-niên khóa	- nvarchar(100)
+
+4 LỚP
+	-mã lớp(pk)	- varchar(10)
+	-tên lớp	- nvarchar(100)
+	-mã ngành(fk)	- varchar(10)
+	-mã khóa học(fk)- varchar(10)
+
+5 SINH VIÊN
+	-mã sinh viên(pk)- varchar(10)
+	-tên sinh viên	- nvarchar(100)
+	-giới tính	- nvarchar(10)
+	-email(username)- varchar(100)
+	-password(mã sv)- varchar(100)
+	-năm sinh	- datatime
+	-sđt		- varchar(10)
+	-địa chỉ	- nvarchar(250)
+	-ghi chú	- nvarchar(250)
+	-mã lớp(fk)	- varchar(10)
+
+6 MÔN HỌC
+	-mã môn học(pk)	- varchar(10)
+	-tên môn học	- nvarchar(100)
+	-số tín chỉ	- varchar
+	-mã ngành(fk)	- varchar(10)
+
+7 ĐIỂM
+	-mã sv(pk_fk)	- varchar(10)
+	-mã môn(pk_fk)	- varchar(10)
+	-điểm 30	- float
+	-điểm 70 L1	- float
+	-điểm 70 L2	- float
+	-ĐTB		- float
+	-DiemChu	-varchar(10)	
+
+8 GIẢNG VIÊN
+	-mã gv(pk)	- varchar(10)
+	-tên gv		- nvarchar(100)
+	-giới tính	- nvarchar(10)
+	-năm sinh	- datatime
+	-trình độ	- nvarchar(100)
+	-sđt		- varchar(10)
+	-email(username)- varchar(100)
+	-password(mã gv)- nvarchar(100)
+	-địa chỉ	- nvarchar(250)
+	-ghi chú	- nvarchar(250)
+
+9 TKB
+	-mã tkb(pk)	- varchar(10)
+	-mã lớp(fk)	- varchar(10)
+	-học kì		- nvarchar(20)
+	-mã môn(fk)	- varchar(10)
+	-thỨ		- nvarchar(20)
+	-mã giảng viên(fk)	- varchar(10)
+	-thời gian	- nvarchar(50)
+	-phòng học	- nvarchar(120)
+	-ngày bắt đầu	- datatime
+	-ngày kết thúc	-datatime 
+
+10 Account Admin - chỉ sử dụng cho C#
+	-mã admin		- varchar(10)
+	-tên admin		- nvarchar(100)
+	-giới tính		- nvarchar(100)
+	-năm sinh		- datatime 
+	-sđt			- varchar(10)
+	-email(username)	- varchar(100)
+	-password(password)	- varchar(100)
+	-địa chỉ		- nvarchar(250)
+	
+	
+	
+	
+
+	
+	
